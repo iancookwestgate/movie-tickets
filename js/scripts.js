@@ -87,7 +87,6 @@ $(document).ready(function() {
   attachContactListeners();
   $("form#new-ticket").submit(function(event) {
     event.preventDefault();
-
     var inputtedMovie = $("select#movies").val();
     var inputtedTime = $("select#movieTime").val();
     var inputtedAge = $("select#age").val();
@@ -99,5 +98,5 @@ $(document).ready(function() {
     var newTicket = new Selection(inputtedMovie, inputtedTime, inputtedAge);
     tickets.addTicket(newTicket);
     displaySelectedTickets(tickets);
-  })
+  });
 })
